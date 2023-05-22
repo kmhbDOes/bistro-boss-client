@@ -1,9 +1,10 @@
 import React from "react";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer>
-      <div className="footer p-10 bg-neutral text-neutral-content">
+      <div className="footer p-10 bg-neutral text-neutral-content flex flex-col md:flex-row justify-center">
         <div>
           <svg
             width="50"
@@ -63,7 +64,10 @@ const Footer = () => {
       </div>
       <div className="footer-center p-4 bg-black text-white">
         <div>
-          <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+          <p>
+            Copyright © {currentYear} - All right reserved by ACME Industries
+            Ltd
+          </p>
         </div>
       </div>
     </footer>
