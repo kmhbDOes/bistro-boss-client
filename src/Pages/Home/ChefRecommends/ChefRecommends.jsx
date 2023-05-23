@@ -14,13 +14,13 @@ const ChefRecommends = () => {
 
       {/* Cards */}
       <div className="card w-96 bg-base-100 shadow-xl rounded-lg">
-        <img src={slide3} className="" alt="food" />
+        <img src={slide3} className="h-80" alt="food" />
 
         <div className="card-body text-center">
-          <h2 className=" text-center">Shoes!</h2>
+          <h2 className=" text-center">Salad</h2>
           <p>If a dog chews shoes whose shoes does he choose?</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-outline border-0 border-b-4 mt-4">
+            <button className="btn btn-outline mx-auto border-0 border-b-4 mt-4 border-yellow-500 text-yellow-500">
               View Full Menu
             </button>
           </div>
