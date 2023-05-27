@@ -4,6 +4,7 @@ import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
+// To Do: implement Pagination
 const OrderTab = ({ items }) => {
   const pagination = {
     clickable: true,
