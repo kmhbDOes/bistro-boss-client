@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Providers/AuthProvider";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const SignUp = () => {
   const {
@@ -19,7 +20,7 @@ const SignUp = () => {
   const onSubmit = (data) => {
     createUser(data.email, data.password).then((result) => {
       const loggedUser = result.user;
-
+      console.log(loggedUser);
       updateUserProfile(data.name, data.photoURL)
         .then(() => {
           const saveUser = { name: data.name, email: data.email };
@@ -153,11 +154,15 @@ const SignUp = () => {
                 <button className="btn btn-primary">Sign Up</button>
               </div>
             </form>
-            <p>
+            <p className="text-center my-3">
               <small>
-                Already have an account? <Link to="/login">Login </Link>
+                Already have an account?{" "}
+                <Link className="link" to="/login">
+                  Login{" "}
+                </Link>
               </small>
             </p>
+            <SocialLogin></SocialLogin>
           </div>
         </div>
       </div>
