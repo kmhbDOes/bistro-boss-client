@@ -12,11 +12,13 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import useCart from "../Hooks/useCart";
+import useAdmin from "../Hooks/useAdmin";
 const Dashboard = () => {
   const [cart] = useCart();
 
   //  To Do: Load Data from the server to have dynamic isAdmin based on Data
-  const isAdmin = true;
+  // const isAdmin = true;
+  const [isAdmin] = useAdmin();
   return (
     <div className="drawer drawer-mobile ">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -40,7 +42,7 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/reservations">
+                <NavLink to="/dashboard/addItem">
                   <FaUtensils></FaUtensils> Add Items
                 </NavLink>
               </li>
