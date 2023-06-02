@@ -18,7 +18,7 @@ const Payment = () => {
         Teka mane tejpata
       </h2>
       <Elements stripe={stripePromise}>
-        <CheckoutForm price={price}></CheckoutForm>
+        <CheckoutForm price={price} cart={cart}></CheckoutForm>
       </Elements>
     </div>
   );
