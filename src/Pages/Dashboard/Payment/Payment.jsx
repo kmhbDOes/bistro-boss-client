@@ -14,9 +14,7 @@ const Payment = () => {
   return (
     <div>
       <SectionTitle heading="Payment" subHeading="Proceed To"></SectionTitle>
-      <h2 className="text-3xl text-emerald-500 text-center">
-        Teka mane tejpata
-      </h2>
+
       <Elements stripe={stripePromise}>
         <CheckoutForm price={price} cart={cart}></CheckoutForm>
       </Elements>
